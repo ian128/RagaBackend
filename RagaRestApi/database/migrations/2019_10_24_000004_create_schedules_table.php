@@ -18,6 +18,8 @@ class CreateSchedulesTable extends Migration
             $table->string('day');
             $table->time('open');
             $table->time('close');
+            $table->integer('court_id')->unsigned();
+            $table->foreign('court_id')->references('id')->on('courts');
             // $table->timestamps();
         });
     }
