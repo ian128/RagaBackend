@@ -20,8 +20,6 @@ class CreateCourtsTable extends Migration
             $table->float('weekend_price');
             $table->string('location');
             $table->string('phone_number');
-            $table->integer('schedule_id')->unsigned();
-            $table->foreign('schedule_id')->references('id')->on('schedules');
             // $table->timestamps();
         });
     }

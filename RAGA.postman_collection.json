@@ -1,0 +1,780 @@
+{
+	"info": {
+		"_postman_id": "12d59163-a92b-42c5-9b81-0853118f6fa3",
+		"name": "RAGA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LoginAuthToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "ahsanulqalbi@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "ahsanul",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrasi Auth Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register?name=Ahsanul&email=ahsanul@gmail.com&password=ahsanul&c_password=ahsanul",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ahsanul"
+						},
+						{
+							"key": "email",
+							"value": "ahsanul@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "ahsanul"
+						},
+						{
+							"key": "c_password",
+							"value": "ahsanul"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Users Account",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjFkYzM3ODBlMTMwZjhjODZiOGMzMThjOGExMTA3MGQ0MmUyNDE1NWY2ZWM0NTU4MWQ2MzE2MjJkNWVkMWM5YTMyNjYwOWQyZmIxYzhhMjM2In0.eyJhdWQiOiI3IiwianRpIjoiMWRjMzc4MGUxMzBmOGM4NmI4YzMxOGM4YTExMDcwZDQyZTI0MTU1ZjZlYzQ1NTgxZDYzMTYyMmQ1ZWQxYzlhMzI2NjA5ZDJmYjFjOGEyMzYiLCJpYXQiOjE1NzIxODA3NDAsIm5iZiI6MTU3MjE4MDc0MCwiZXhwIjoxNjAzODAzMTQwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YypoLoc1FyTf6ge6wT0jFiHBRhecMWtLsMny5h00giYN4A-GrUPDBU1oWfmtDSeRWgByc23aZPC63aK7r9kqaw3WtOZ_m1GsPX0kIR8hB--LC0394Hsbg6DFde_G6bAF8QWkrOoCIJ9WGInhkApQOhZiRvxFQYXsvqyaUhzJFry4awAbEobOXw6u9ubBC1TZOC0ifi0wVB5pr2U6EP5jzWDFdVqLRiaf-hZjyraKYPBxEpV8R7JEWUNd5etG7uhjILNclZLKosdrRQ9w56nh_omsCGqiAGrXzr6AvlV6VJ7RYvieWZM8R6OrQxKM_MjufP5FcnYpk_ob1M-5u20XHuFFyVBOFSC_Cx3xAwj11FWV__kGoyYliyydOL5NBafsyo0zvTw0kwioJTogwhDAzp2oW_nnbbk6n1Fw2KkjMPP1qdj8ulYTgoxw-IX3gseilEIblLqvxoU8iYgqgah9a_8Cmd5FBGkoytmflE2jXwY0Z4zZ-dCoyA6kLfceilzDnZI3I659OtLMrqi2EY6g7lXGaJV7DT-ek1heZmkSsMPacok0eTy54y2QmboGsQpMiSGsrqpPNVAUwJxnVOvf8xnZMIrEbcqQ8S2wRZa_cwCFVd1AGtzwMZ5QlWqfflD6SWkjaLYdoHLYr11DDaJxkWIaqpy4zFQEpbi03qc1RPc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/account",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a User Account",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjFkYzM3ODBlMTMwZjhjODZiOGMzMThjOGExMTA3MGQ0MmUyNDE1NWY2ZWM0NTU4MWQ2MzE2MjJkNWVkMWM5YTMyNjYwOWQyZmIxYzhhMjM2In0.eyJhdWQiOiI3IiwianRpIjoiMWRjMzc4MGUxMzBmOGM4NmI4YzMxOGM4YTExMDcwZDQyZTI0MTU1ZjZlYzQ1NTgxZDYzMTYyMmQ1ZWQxYzlhMzI2NjA5ZDJmYjFjOGEyMzYiLCJpYXQiOjE1NzIxODA3NDAsIm5iZiI6MTU3MjE4MDc0MCwiZXhwIjoxNjAzODAzMTQwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YypoLoc1FyTf6ge6wT0jFiHBRhecMWtLsMny5h00giYN4A-GrUPDBU1oWfmtDSeRWgByc23aZPC63aK7r9kqaw3WtOZ_m1GsPX0kIR8hB--LC0394Hsbg6DFde_G6bAF8QWkrOoCIJ9WGInhkApQOhZiRvxFQYXsvqyaUhzJFry4awAbEobOXw6u9ubBC1TZOC0ifi0wVB5pr2U6EP5jzWDFdVqLRiaf-hZjyraKYPBxEpV8R7JEWUNd5etG7uhjILNclZLKosdrRQ9w56nh_omsCGqiAGrXzr6AvlV6VJ7RYvieWZM8R6OrQxKM_MjufP5FcnYpk_ob1M-5u20XHuFFyVBOFSC_Cx3xAwj11FWV__kGoyYliyydOL5NBafsyo0zvTw0kwioJTogwhDAzp2oW_nnbbk6n1Fw2KkjMPP1qdj8ulYTgoxw-IX3gseilEIblLqvxoU8iYgqgah9a_8Cmd5FBGkoytmflE2jXwY0Z4zZ-dCoyA6kLfceilzDnZI3I659OtLMrqi2EY6g7lXGaJV7DT-ek1heZmkSsMPacok0eTy54y2QmboGsQpMiSGsrqpPNVAUwJxnVOvf8xnZMIrEbcqQ8S2wRZa_cwCFVd1AGtzwMZ5QlWqfflD6SWkjaLYdoHLYr11DDaJxkWIaqpy4zFQEpbi03qc1RPc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/account/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"account",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new User Account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "APP_KEY",
+						"value": "ABCDEFGHIJK",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/account?name=Qalbi&email=qalbi@gmail.com&username=qalbi&password=qalbi&phone_number=081218989999",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"account"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Qalbi"
+						},
+						{
+							"key": "email",
+							"value": "qalbi@gmail.com"
+						},
+						{
+							"key": "username",
+							"value": "qalbi"
+						},
+						{
+							"key": "password",
+							"value": "qalbi"
+						},
+						{
+							"key": "phone_number",
+							"value": "081218989999"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Account",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjFkYzM3ODBlMTMwZjhjODZiOGMzMThjOGExMTA3MGQ0MmUyNDE1NWY2ZWM0NTU4MWQ2MzE2MjJkNWVkMWM5YTMyNjYwOWQyZmIxYzhhMjM2In0.eyJhdWQiOiI3IiwianRpIjoiMWRjMzc4MGUxMzBmOGM4NmI4YzMxOGM4YTExMDcwZDQyZTI0MTU1ZjZlYzQ1NTgxZDYzMTYyMmQ1ZWQxYzlhMzI2NjA5ZDJmYjFjOGEyMzYiLCJpYXQiOjE1NzIxODA3NDAsIm5iZiI6MTU3MjE4MDc0MCwiZXhwIjoxNjAzODAzMTQwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YypoLoc1FyTf6ge6wT0jFiHBRhecMWtLsMny5h00giYN4A-GrUPDBU1oWfmtDSeRWgByc23aZPC63aK7r9kqaw3WtOZ_m1GsPX0kIR8hB--LC0394Hsbg6DFde_G6bAF8QWkrOoCIJ9WGInhkApQOhZiRvxFQYXsvqyaUhzJFry4awAbEobOXw6u9ubBC1TZOC0ifi0wVB5pr2U6EP5jzWDFdVqLRiaf-hZjyraKYPBxEpV8R7JEWUNd5etG7uhjILNclZLKosdrRQ9w56nh_omsCGqiAGrXzr6AvlV6VJ7RYvieWZM8R6OrQxKM_MjufP5FcnYpk_ob1M-5u20XHuFFyVBOFSC_Cx3xAwj11FWV__kGoyYliyydOL5NBafsyo0zvTw0kwioJTogwhDAzp2oW_nnbbk6n1Fw2KkjMPP1qdj8ulYTgoxw-IX3gseilEIblLqvxoU8iYgqgah9a_8Cmd5FBGkoytmflE2jXwY0Z4zZ-dCoyA6kLfceilzDnZI3I659OtLMrqi2EY6g7lXGaJV7DT-ek1heZmkSsMPacok0eTy54y2QmboGsQpMiSGsrqpPNVAUwJxnVOvf8xnZMIrEbcqQ8S2wRZa_cwCFVd1AGtzwMZ5QlWqfflD6SWkjaLYdoHLYr11DDaJxkWIaqpy4zFQEpbi03qc1RPc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/account/{{id_user}}?{{params field yang mau diupdate}}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"account",
+						"{{id_user}}"
+					],
+					"query": [
+						{
+							"key": "{{params field yang mau diupdate}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User Account",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/account/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"account",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Sports ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjFkYzM3ODBlMTMwZjhjODZiOGMzMThjOGExMTA3MGQ0MmUyNDE1NWY2ZWM0NTU4MWQ2MzE2MjJkNWVkMWM5YTMyNjYwOWQyZmIxYzhhMjM2In0.eyJhdWQiOiI3IiwianRpIjoiMWRjMzc4MGUxMzBmOGM4NmI4YzMxOGM4YTExMDcwZDQyZTI0MTU1ZjZlYzQ1NTgxZDYzMTYyMmQ1ZWQxYzlhMzI2NjA5ZDJmYjFjOGEyMzYiLCJpYXQiOjE1NzIxODA3NDAsIm5iZiI6MTU3MjE4MDc0MCwiZXhwIjoxNjAzODAzMTQwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YypoLoc1FyTf6ge6wT0jFiHBRhecMWtLsMny5h00giYN4A-GrUPDBU1oWfmtDSeRWgByc23aZPC63aK7r9kqaw3WtOZ_m1GsPX0kIR8hB--LC0394Hsbg6DFde_G6bAF8QWkrOoCIJ9WGInhkApQOhZiRvxFQYXsvqyaUhzJFry4awAbEobOXw6u9ubBC1TZOC0ifi0wVB5pr2U6EP5jzWDFdVqLRiaf-hZjyraKYPBxEpV8R7JEWUNd5etG7uhjILNclZLKosdrRQ9w56nh_omsCGqiAGrXzr6AvlV6VJ7RYvieWZM8R6OrQxKM_MjufP5FcnYpk_ob1M-5u20XHuFFyVBOFSC_Cx3xAwj11FWV__kGoyYliyydOL5NBafsyo0zvTw0kwioJTogwhDAzp2oW_nnbbk6n1Fw2KkjMPP1qdj8ulYTgoxw-IX3gseilEIblLqvxoU8iYgqgah9a_8Cmd5FBGkoytmflE2jXwY0Z4zZ-dCoyA6kLfceilzDnZI3I659OtLMrqi2EY6g7lXGaJV7DT-ek1heZmkSsMPacok0eTy54y2QmboGsQpMiSGsrqpPNVAUwJxnVOvf8xnZMIrEbcqQ8S2wRZa_cwCFVd1AGtzwMZ5QlWqfflD6SWkjaLYdoHLYr11DDaJxkWIaqpy4zFQEpbi03qc1RPc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/sport",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a sport",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjFkYzM3ODBlMTMwZjhjODZiOGMzMThjOGExMTA3MGQ0MmUyNDE1NWY2ZWM0NTU4MWQ2MzE2MjJkNWVkMWM5YTMyNjYwOWQyZmIxYzhhMjM2In0.eyJhdWQiOiI3IiwianRpIjoiMWRjMzc4MGUxMzBmOGM4NmI4YzMxOGM4YTExMDcwZDQyZTI0MTU1ZjZlYzQ1NTgxZDYzMTYyMmQ1ZWQxYzlhMzI2NjA5ZDJmYjFjOGEyMzYiLCJpYXQiOjE1NzIxODA3NDAsIm5iZiI6MTU3MjE4MDc0MCwiZXhwIjoxNjAzODAzMTQwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YypoLoc1FyTf6ge6wT0jFiHBRhecMWtLsMny5h00giYN4A-GrUPDBU1oWfmtDSeRWgByc23aZPC63aK7r9kqaw3WtOZ_m1GsPX0kIR8hB--LC0394Hsbg6DFde_G6bAF8QWkrOoCIJ9WGInhkApQOhZiRvxFQYXsvqyaUhzJFry4awAbEobOXw6u9ubBC1TZOC0ifi0wVB5pr2U6EP5jzWDFdVqLRiaf-hZjyraKYPBxEpV8R7JEWUNd5etG7uhjILNclZLKosdrRQ9w56nh_omsCGqiAGrXzr6AvlV6VJ7RYvieWZM8R6OrQxKM_MjufP5FcnYpk_ob1M-5u20XHuFFyVBOFSC_Cx3xAwj11FWV__kGoyYliyydOL5NBafsyo0zvTw0kwioJTogwhDAzp2oW_nnbbk6n1Fw2KkjMPP1qdj8ulYTgoxw-IX3gseilEIblLqvxoU8iYgqgah9a_8Cmd5FBGkoytmflE2jXwY0Z4zZ-dCoyA6kLfceilzDnZI3I659OtLMrqi2EY6g7lXGaJV7DT-ek1heZmkSsMPacok0eTy54y2QmboGsQpMiSGsrqpPNVAUwJxnVOvf8xnZMIrEbcqQ8S2wRZa_cwCFVd1AGtzwMZ5QlWqfflD6SWkjaLYdoHLYr11DDaJxkWIaqpy4zFQEpbi03qc1RPc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/sport/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sport",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a sport",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjFkYzM3ODBlMTMwZjhjODZiOGMzMThjOGExMTA3MGQ0MmUyNDE1NWY2ZWM0NTU4MWQ2MzE2MjJkNWVkMWM5YTMyNjYwOWQyZmIxYzhhMjM2In0.eyJhdWQiOiI3IiwianRpIjoiMWRjMzc4MGUxMzBmOGM4NmI4YzMxOGM4YTExMDcwZDQyZTI0MTU1ZjZlYzQ1NTgxZDYzMTYyMmQ1ZWQxYzlhMzI2NjA5ZDJmYjFjOGEyMzYiLCJpYXQiOjE1NzIxODA3NDAsIm5iZiI6MTU3MjE4MDc0MCwiZXhwIjoxNjAzODAzMTQwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YypoLoc1FyTf6ge6wT0jFiHBRhecMWtLsMny5h00giYN4A-GrUPDBU1oWfmtDSeRWgByc23aZPC63aK7r9kqaw3WtOZ_m1GsPX0kIR8hB--LC0394Hsbg6DFde_G6bAF8QWkrOoCIJ9WGInhkApQOhZiRvxFQYXsvqyaUhzJFry4awAbEobOXw6u9ubBC1TZOC0ifi0wVB5pr2U6EP5jzWDFdVqLRiaf-hZjyraKYPBxEpV8R7JEWUNd5etG7uhjILNclZLKosdrRQ9w56nh_omsCGqiAGrXzr6AvlV6VJ7RYvieWZM8R6OrQxKM_MjufP5FcnYpk_ob1M-5u20XHuFFyVBOFSC_Cx3xAwj11FWV__kGoyYliyydOL5NBafsyo0zvTw0kwioJTogwhDAzp2oW_nnbbk6n1Fw2KkjMPP1qdj8ulYTgoxw-IX3gseilEIblLqvxoU8iYgqgah9a_8Cmd5FBGkoytmflE2jXwY0Z4zZ-dCoyA6kLfceilzDnZI3I659OtLMrqi2EY6g7lXGaJV7DT-ek1heZmkSsMPacok0eTy54y2QmboGsQpMiSGsrqpPNVAUwJxnVOvf8xnZMIrEbcqQ8S2wRZa_cwCFVd1AGtzwMZ5QlWqfflD6SWkjaLYdoHLYr11DDaJxkWIaqpy4zFQEpbi03qc1RPc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/sport/1/?max_participant=7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sport",
+						"1",
+						""
+					],
+					"query": [
+						{
+							"key": "max_participant",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Sport",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZlMDAyMTRjODc4ZTBiOTZhMGZiZWExOGNlODI3MmVmMTE3ZTQzYTY5NWQwMzgxODFjNmU0NGQwM2U0NDAxNDFkZGI3YzBhOGI4MTdkNzEwIn0.eyJhdWQiOiIxIiwianRpIjoiNmUwMDIxNGM4NzhlMGI5NmEwZmJlYTE4Y2U4MjcyZWYxMTdlNDNhNjk1ZDAzODE4MWM2ZTQ0ZDAzZTQ0MDE0MWRkYjdjMGE4YjgxN2Q3MTAiLCJpYXQiOjE1NzIxODc0NjAsIm5iZiI6MTU3MjE4NzQ2MCwiZXhwIjoxNjAzODA5ODYwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rqmPl0Xa1ncP-NAYJsFLtZA-qIHHgL_yIbczGKd3Px_6mROjw2qW0f8QppxbTxST_JsCjXYgqjvUFdLJ-yOPi5i1tEZ6F6PIyWvkDax6UDUmm5Y7-DAuWu7r7J5ZUv0JVZAas1iSfCh3DbT3mLjNPEumsH88_FQJKNdyap_O7M3AEJvGAtvc-AheY4dE9n2WVNdYe9lUK7w6hU0ZcWTHt0aCkIeyJvBQM5FHPSdOymHdRvmd_tQEEorc1DuBqO0UubKfZGsbWUMcaxgQn1ZGLWqxbKG0AE_NvuLJrE2NCyF4ZQqH-VV6oTDlUC71iMbYNgm8Pi3F6dut5nQlc-3y9DOj1biZAQ-veLD_BiON9h9o8UPW9P-LauIPlCd2KGNECuRJX_gf9R51kOiAhzarOFeXBTSCJwCVrB7FMHIg-AoLmWjpVeNc_uiYV1YCwX0mZAtfljdM7VUYQBIyZgYpB9ctVyqbKMPU6j1SBAAcpIhoG1ZXy8m0W0CHqLMn0jGjk6wIEH9LurK1vHNEvLH9DpWoQfjQtvffkSRwuhQMaeaRwWD8XOWy8dE7amXWqwjBQ6w-B2meMqRXG1bQhujwB_wmzMIgX6cpXFWbyxNX0fEn5v-PxS3mLLS_d-IOl3TdtiXpm3012TWYyHZcjJqERiyx9D_1yDD6t_GNfVd7jTM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/sport?name=Basket&max_participant=6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sport"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Basket"
+						},
+						{
+							"key": "max_participant",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Sport",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjFkYzM3ODBlMTMwZjhjODZiOGMzMThjOGExMTA3MGQ0MmUyNDE1NWY2ZWM0NTU4MWQ2MzE2MjJkNWVkMWM5YTMyNjYwOWQyZmIxYzhhMjM2In0.eyJhdWQiOiI3IiwianRpIjoiMWRjMzc4MGUxMzBmOGM4NmI4YzMxOGM4YTExMDcwZDQyZTI0MTU1ZjZlYzQ1NTgxZDYzMTYyMmQ1ZWQxYzlhMzI2NjA5ZDJmYjFjOGEyMzYiLCJpYXQiOjE1NzIxODA3NDAsIm5iZiI6MTU3MjE4MDc0MCwiZXhwIjoxNjAzODAzMTQwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YypoLoc1FyTf6ge6wT0jFiHBRhecMWtLsMny5h00giYN4A-GrUPDBU1oWfmtDSeRWgByc23aZPC63aK7r9kqaw3WtOZ_m1GsPX0kIR8hB--LC0394Hsbg6DFde_G6bAF8QWkrOoCIJ9WGInhkApQOhZiRvxFQYXsvqyaUhzJFry4awAbEobOXw6u9ubBC1TZOC0ifi0wVB5pr2U6EP5jzWDFdVqLRiaf-hZjyraKYPBxEpV8R7JEWUNd5etG7uhjILNclZLKosdrRQ9w56nh_omsCGqiAGrXzr6AvlV6VJ7RYvieWZM8R6OrQxKM_MjufP5FcnYpk_ob1M-5u20XHuFFyVBOFSC_Cx3xAwj11FWV__kGoyYliyydOL5NBafsyo0zvTw0kwioJTogwhDAzp2oW_nnbbk6n1Fw2KkjMPP1qdj8ulYTgoxw-IX3gseilEIblLqvxoU8iYgqgah9a_8Cmd5FBGkoytmflE2jXwY0Z4zZ-dCoyA6kLfceilzDnZI3I659OtLMrqi2EY6g7lXGaJV7DT-ek1heZmkSsMPacok0eTy54y2QmboGsQpMiSGsrqpPNVAUwJxnVOvf8xnZMIrEbcqQ8S2wRZa_cwCFVd1AGtzwMZ5QlWqfflD6SWkjaLYdoHLYr11DDaJxkWIaqpy4zFQEpbi03qc1RPc\"",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/sport/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sport",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Sparrings",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZlMDAyMTRjODc4ZTBiOTZhMGZiZWExOGNlODI3MmVmMTE3ZTQzYTY5NWQwMzgxODFjNmU0NGQwM2U0NDAxNDFkZGI3YzBhOGI4MTdkNzEwIn0.eyJhdWQiOiIxIiwianRpIjoiNmUwMDIxNGM4NzhlMGI5NmEwZmJlYTE4Y2U4MjcyZWYxMTdlNDNhNjk1ZDAzODE4MWM2ZTQ0ZDAzZTQ0MDE0MWRkYjdjMGE4YjgxN2Q3MTAiLCJpYXQiOjE1NzIxODc0NjAsIm5iZiI6MTU3MjE4NzQ2MCwiZXhwIjoxNjAzODA5ODYwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rqmPl0Xa1ncP-NAYJsFLtZA-qIHHgL_yIbczGKd3Px_6mROjw2qW0f8QppxbTxST_JsCjXYgqjvUFdLJ-yOPi5i1tEZ6F6PIyWvkDax6UDUmm5Y7-DAuWu7r7J5ZUv0JVZAas1iSfCh3DbT3mLjNPEumsH88_FQJKNdyap_O7M3AEJvGAtvc-AheY4dE9n2WVNdYe9lUK7w6hU0ZcWTHt0aCkIeyJvBQM5FHPSdOymHdRvmd_tQEEorc1DuBqO0UubKfZGsbWUMcaxgQn1ZGLWqxbKG0AE_NvuLJrE2NCyF4ZQqH-VV6oTDlUC71iMbYNgm8Pi3F6dut5nQlc-3y9DOj1biZAQ-veLD_BiON9h9o8UPW9P-LauIPlCd2KGNECuRJX_gf9R51kOiAhzarOFeXBTSCJwCVrB7FMHIg-AoLmWjpVeNc_uiYV1YCwX0mZAtfljdM7VUYQBIyZgYpB9ctVyqbKMPU6j1SBAAcpIhoG1ZXy8m0W0CHqLMn0jGjk6wIEH9LurK1vHNEvLH9DpWoQfjQtvffkSRwuhQMaeaRwWD8XOWy8dE7amXWqwjBQ6w-B2meMqRXG1bQhujwB_wmzMIgX6cpXFWbyxNX0fEn5v-PxS3mLLS_d-IOl3TdtiXpm3012TWYyHZcjJqERiyx9D_1yDD6t_GNfVd7jTM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/sparring",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sparring"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a Sparring",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZlMDAyMTRjODc4ZTBiOTZhMGZiZWExOGNlODI3MmVmMTE3ZTQzYTY5NWQwMzgxODFjNmU0NGQwM2U0NDAxNDFkZGI3YzBhOGI4MTdkNzEwIn0.eyJhdWQiOiIxIiwianRpIjoiNmUwMDIxNGM4NzhlMGI5NmEwZmJlYTE4Y2U4MjcyZWYxMTdlNDNhNjk1ZDAzODE4MWM2ZTQ0ZDAzZTQ0MDE0MWRkYjdjMGE4YjgxN2Q3MTAiLCJpYXQiOjE1NzIxODc0NjAsIm5iZiI6MTU3MjE4NzQ2MCwiZXhwIjoxNjAzODA5ODYwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rqmPl0Xa1ncP-NAYJsFLtZA-qIHHgL_yIbczGKd3Px_6mROjw2qW0f8QppxbTxST_JsCjXYgqjvUFdLJ-yOPi5i1tEZ6F6PIyWvkDax6UDUmm5Y7-DAuWu7r7J5ZUv0JVZAas1iSfCh3DbT3mLjNPEumsH88_FQJKNdyap_O7M3AEJvGAtvc-AheY4dE9n2WVNdYe9lUK7w6hU0ZcWTHt0aCkIeyJvBQM5FHPSdOymHdRvmd_tQEEorc1DuBqO0UubKfZGsbWUMcaxgQn1ZGLWqxbKG0AE_NvuLJrE2NCyF4ZQqH-VV6oTDlUC71iMbYNgm8Pi3F6dut5nQlc-3y9DOj1biZAQ-veLD_BiON9h9o8UPW9P-LauIPlCd2KGNECuRJX_gf9R51kOiAhzarOFeXBTSCJwCVrB7FMHIg-AoLmWjpVeNc_uiYV1YCwX0mZAtfljdM7VUYQBIyZgYpB9ctVyqbKMPU6j1SBAAcpIhoG1ZXy8m0W0CHqLMn0jGjk6wIEH9LurK1vHNEvLH9DpWoQfjQtvffkSRwuhQMaeaRwWD8XOWy8dE7amXWqwjBQ6w-B2meMqRXG1bQhujwB_wmzMIgX6cpXFWbyxNX0fEn5v-PxS3mLLS_d-IOl3TdtiXpm3012TWYyHZcjJqERiyx9D_1yDD6t_GNfVd7jTM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/sparring/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sparring",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Sparring",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZlMDAyMTRjODc4ZTBiOTZhMGZiZWExOGNlODI3MmVmMTE3ZTQzYTY5NWQwMzgxODFjNmU0NGQwM2U0NDAxNDFkZGI3YzBhOGI4MTdkNzEwIn0.eyJhdWQiOiIxIiwianRpIjoiNmUwMDIxNGM4NzhlMGI5NmEwZmJlYTE4Y2U4MjcyZWYxMTdlNDNhNjk1ZDAzODE4MWM2ZTQ0ZDAzZTQ0MDE0MWRkYjdjMGE4YjgxN2Q3MTAiLCJpYXQiOjE1NzIxODc0NjAsIm5iZiI6MTU3MjE4NzQ2MCwiZXhwIjoxNjAzODA5ODYwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rqmPl0Xa1ncP-NAYJsFLtZA-qIHHgL_yIbczGKd3Px_6mROjw2qW0f8QppxbTxST_JsCjXYgqjvUFdLJ-yOPi5i1tEZ6F6PIyWvkDax6UDUmm5Y7-DAuWu7r7J5ZUv0JVZAas1iSfCh3DbT3mLjNPEumsH88_FQJKNdyap_O7M3AEJvGAtvc-AheY4dE9n2WVNdYe9lUK7w6hU0ZcWTHt0aCkIeyJvBQM5FHPSdOymHdRvmd_tQEEorc1DuBqO0UubKfZGsbWUMcaxgQn1ZGLWqxbKG0AE_NvuLJrE2NCyF4ZQqH-VV6oTDlUC71iMbYNgm8Pi3F6dut5nQlc-3y9DOj1biZAQ-veLD_BiON9h9o8UPW9P-LauIPlCd2KGNECuRJX_gf9R51kOiAhzarOFeXBTSCJwCVrB7FMHIg-AoLmWjpVeNc_uiYV1YCwX0mZAtfljdM7VUYQBIyZgYpB9ctVyqbKMPU6j1SBAAcpIhoG1ZXy8m0W0CHqLMn0jGjk6wIEH9LurK1vHNEvLH9DpWoQfjQtvffkSRwuhQMaeaRwWD8XOWy8dE7amXWqwjBQ6w-B2meMqRXG1bQhujwB_wmzMIgX6cpXFWbyxNX0fEn5v-PxS3mLLS_d-IOl3TdtiXpm3012TWYyHZcjJqERiyx9D_1yDD6t_GNfVd7jTM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/sparring?court_id=1&starting_time=2001-03-10 17:16:18&ending_time=2001-03-10 17:16:17&sport_id=1&status=over",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sparring"
+					],
+					"query": [
+						{
+							"key": "court_id",
+							"value": "1"
+						},
+						{
+							"key": "starting_time",
+							"value": "2001-03-10 17:16:18"
+						},
+						{
+							"key": "ending_time",
+							"value": "2001-03-10 17:16:17"
+						},
+						{
+							"key": "sport_id",
+							"value": "1"
+						},
+						{
+							"key": "status",
+							"value": "over"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Sparring",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZlMDAyMTRjODc4ZTBiOTZhMGZiZWExOGNlODI3MmVmMTE3ZTQzYTY5NWQwMzgxODFjNmU0NGQwM2U0NDAxNDFkZGI3YzBhOGI4MTdkNzEwIn0.eyJhdWQiOiIxIiwianRpIjoiNmUwMDIxNGM4NzhlMGI5NmEwZmJlYTE4Y2U4MjcyZWYxMTdlNDNhNjk1ZDAzODE4MWM2ZTQ0ZDAzZTQ0MDE0MWRkYjdjMGE4YjgxN2Q3MTAiLCJpYXQiOjE1NzIxODc0NjAsIm5iZiI6MTU3MjE4NzQ2MCwiZXhwIjoxNjAzODA5ODYwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rqmPl0Xa1ncP-NAYJsFLtZA-qIHHgL_yIbczGKd3Px_6mROjw2qW0f8QppxbTxST_JsCjXYgqjvUFdLJ-yOPi5i1tEZ6F6PIyWvkDax6UDUmm5Y7-DAuWu7r7J5ZUv0JVZAas1iSfCh3DbT3mLjNPEumsH88_FQJKNdyap_O7M3AEJvGAtvc-AheY4dE9n2WVNdYe9lUK7w6hU0ZcWTHt0aCkIeyJvBQM5FHPSdOymHdRvmd_tQEEorc1DuBqO0UubKfZGsbWUMcaxgQn1ZGLWqxbKG0AE_NvuLJrE2NCyF4ZQqH-VV6oTDlUC71iMbYNgm8Pi3F6dut5nQlc-3y9DOj1biZAQ-veLD_BiON9h9o8UPW9P-LauIPlCd2KGNECuRJX_gf9R51kOiAhzarOFeXBTSCJwCVrB7FMHIg-AoLmWjpVeNc_uiYV1YCwX0mZAtfljdM7VUYQBIyZgYpB9ctVyqbKMPU6j1SBAAcpIhoG1ZXy8m0W0CHqLMn0jGjk6wIEH9LurK1vHNEvLH9DpWoQfjQtvffkSRwuhQMaeaRwWD8XOWy8dE7amXWqwjBQ6w-B2meMqRXG1bQhujwB_wmzMIgX6cpXFWbyxNX0fEn5v-PxS3mLLS_d-IOl3TdtiXpm3012TWYyHZcjJqERiyx9D_1yDD6t_GNfVd7jTM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/sparring/1?status=starting",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sparring",
+						"1"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "starting"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Sparring",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZlMDAyMTRjODc4ZTBiOTZhMGZiZWExOGNlODI3MmVmMTE3ZTQzYTY5NWQwMzgxODFjNmU0NGQwM2U0NDAxNDFkZGI3YzBhOGI4MTdkNzEwIn0.eyJhdWQiOiIxIiwianRpIjoiNmUwMDIxNGM4NzhlMGI5NmEwZmJlYTE4Y2U4MjcyZWYxMTdlNDNhNjk1ZDAzODE4MWM2ZTQ0ZDAzZTQ0MDE0MWRkYjdjMGE4YjgxN2Q3MTAiLCJpYXQiOjE1NzIxODc0NjAsIm5iZiI6MTU3MjE4NzQ2MCwiZXhwIjoxNjAzODA5ODYwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rqmPl0Xa1ncP-NAYJsFLtZA-qIHHgL_yIbczGKd3Px_6mROjw2qW0f8QppxbTxST_JsCjXYgqjvUFdLJ-yOPi5i1tEZ6F6PIyWvkDax6UDUmm5Y7-DAuWu7r7J5ZUv0JVZAas1iSfCh3DbT3mLjNPEumsH88_FQJKNdyap_O7M3AEJvGAtvc-AheY4dE9n2WVNdYe9lUK7w6hU0ZcWTHt0aCkIeyJvBQM5FHPSdOymHdRvmd_tQEEorc1DuBqO0UubKfZGsbWUMcaxgQn1ZGLWqxbKG0AE_NvuLJrE2NCyF4ZQqH-VV6oTDlUC71iMbYNgm8Pi3F6dut5nQlc-3y9DOj1biZAQ-veLD_BiON9h9o8UPW9P-LauIPlCd2KGNECuRJX_gf9R51kOiAhzarOFeXBTSCJwCVrB7FMHIg-AoLmWjpVeNc_uiYV1YCwX0mZAtfljdM7VUYQBIyZgYpB9ctVyqbKMPU6j1SBAAcpIhoG1ZXy8m0W0CHqLMn0jGjk6wIEH9LurK1vHNEvLH9DpWoQfjQtvffkSRwuhQMaeaRwWD8XOWy8dE7amXWqwjBQ6w-B2meMqRXG1bQhujwB_wmzMIgX6cpXFWbyxNX0fEn5v-PxS3mLLS_d-IOl3TdtiXpm3012TWYyHZcjJqERiyx9D_1yDD6t_GNfVd7jTM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/sparring/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"sparring",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Courts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZlMDAyMTRjODc4ZTBiOTZhMGZiZWExOGNlODI3MmVmMTE3ZTQzYTY5NWQwMzgxODFjNmU0NGQwM2U0NDAxNDFkZGI3YzBhOGI4MTdkNzEwIn0.eyJhdWQiOiIxIiwianRpIjoiNmUwMDIxNGM4NzhlMGI5NmEwZmJlYTE4Y2U4MjcyZWYxMTdlNDNhNjk1ZDAzODE4MWM2ZTQ0ZDAzZTQ0MDE0MWRkYjdjMGE4YjgxN2Q3MTAiLCJpYXQiOjE1NzIxODc0NjAsIm5iZiI6MTU3MjE4NzQ2MCwiZXhwIjoxNjAzODA5ODYwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rqmPl0Xa1ncP-NAYJsFLtZA-qIHHgL_yIbczGKd3Px_6mROjw2qW0f8QppxbTxST_JsCjXYgqjvUFdLJ-yOPi5i1tEZ6F6PIyWvkDax6UDUmm5Y7-DAuWu7r7J5ZUv0JVZAas1iSfCh3DbT3mLjNPEumsH88_FQJKNdyap_O7M3AEJvGAtvc-AheY4dE9n2WVNdYe9lUK7w6hU0ZcWTHt0aCkIeyJvBQM5FHPSdOymHdRvmd_tQEEorc1DuBqO0UubKfZGsbWUMcaxgQn1ZGLWqxbKG0AE_NvuLJrE2NCyF4ZQqH-VV6oTDlUC71iMbYNgm8Pi3F6dut5nQlc-3y9DOj1biZAQ-veLD_BiON9h9o8UPW9P-LauIPlCd2KGNECuRJX_gf9R51kOiAhzarOFeXBTSCJwCVrB7FMHIg-AoLmWjpVeNc_uiYV1YCwX0mZAtfljdM7VUYQBIyZgYpB9ctVyqbKMPU6j1SBAAcpIhoG1ZXy8m0W0CHqLMn0jGjk6wIEH9LurK1vHNEvLH9DpWoQfjQtvffkSRwuhQMaeaRwWD8XOWy8dE7amXWqwjBQ6w-B2meMqRXG1bQhujwB_wmzMIgX6cpXFWbyxNX0fEn5v-PxS3mLLS_d-IOl3TdtiXpm3012TWYyHZcjJqERiyx9D_1yDD6t_GNfVd7jTM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/court",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"court"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a Court",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZlMDAyMTRjODc4ZTBiOTZhMGZiZWExOGNlODI3MmVmMTE3ZTQzYTY5NWQwMzgxODFjNmU0NGQwM2U0NDAxNDFkZGI3YzBhOGI4MTdkNzEwIn0.eyJhdWQiOiIxIiwianRpIjoiNmUwMDIxNGM4NzhlMGI5NmEwZmJlYTE4Y2U4MjcyZWYxMTdlNDNhNjk1ZDAzODE4MWM2ZTQ0ZDAzZTQ0MDE0MWRkYjdjMGE4YjgxN2Q3MTAiLCJpYXQiOjE1NzIxODc0NjAsIm5iZiI6MTU3MjE4NzQ2MCwiZXhwIjoxNjAzODA5ODYwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rqmPl0Xa1ncP-NAYJsFLtZA-qIHHgL_yIbczGKd3Px_6mROjw2qW0f8QppxbTxST_JsCjXYgqjvUFdLJ-yOPi5i1tEZ6F6PIyWvkDax6UDUmm5Y7-DAuWu7r7J5ZUv0JVZAas1iSfCh3DbT3mLjNPEumsH88_FQJKNdyap_O7M3AEJvGAtvc-AheY4dE9n2WVNdYe9lUK7w6hU0ZcWTHt0aCkIeyJvBQM5FHPSdOymHdRvmd_tQEEorc1DuBqO0UubKfZGsbWUMcaxgQn1ZGLWqxbKG0AE_NvuLJrE2NCyF4ZQqH-VV6oTDlUC71iMbYNgm8Pi3F6dut5nQlc-3y9DOj1biZAQ-veLD_BiON9h9o8UPW9P-LauIPlCd2KGNECuRJX_gf9R51kOiAhzarOFeXBTSCJwCVrB7FMHIg-AoLmWjpVeNc_uiYV1YCwX0mZAtfljdM7VUYQBIyZgYpB9ctVyqbKMPU6j1SBAAcpIhoG1ZXy8m0W0CHqLMn0jGjk6wIEH9LurK1vHNEvLH9DpWoQfjQtvffkSRwuhQMaeaRwWD8XOWy8dE7amXWqwjBQ6w-B2meMqRXG1bQhujwB_wmzMIgX6cpXFWbyxNX0fEn5v-PxS3mLLS_d-IOl3TdtiXpm3012TWYyHZcjJqERiyx9D_1yDD6t_GNfVd7jTM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/court/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"court",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Court",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZlMDAyMTRjODc4ZTBiOTZhMGZiZWExOGNlODI3MmVmMTE3ZTQzYTY5NWQwMzgxODFjNmU0NGQwM2U0NDAxNDFkZGI3YzBhOGI4MTdkNzEwIn0.eyJhdWQiOiIxIiwianRpIjoiNmUwMDIxNGM4NzhlMGI5NmEwZmJlYTE4Y2U4MjcyZWYxMTdlNDNhNjk1ZDAzODE4MWM2ZTQ0ZDAzZTQ0MDE0MWRkYjdjMGE4YjgxN2Q3MTAiLCJpYXQiOjE1NzIxODc0NjAsIm5iZiI6MTU3MjE4NzQ2MCwiZXhwIjoxNjAzODA5ODYwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rqmPl0Xa1ncP-NAYJsFLtZA-qIHHgL_yIbczGKd3Px_6mROjw2qW0f8QppxbTxST_JsCjXYgqjvUFdLJ-yOPi5i1tEZ6F6PIyWvkDax6UDUmm5Y7-DAuWu7r7J5ZUv0JVZAas1iSfCh3DbT3mLjNPEumsH88_FQJKNdyap_O7M3AEJvGAtvc-AheY4dE9n2WVNdYe9lUK7w6hU0ZcWTHt0aCkIeyJvBQM5FHPSdOymHdRvmd_tQEEorc1DuBqO0UubKfZGsbWUMcaxgQn1ZGLWqxbKG0AE_NvuLJrE2NCyF4ZQqH-VV6oTDlUC71iMbYNgm8Pi3F6dut5nQlc-3y9DOj1biZAQ-veLD_BiON9h9o8UPW9P-LauIPlCd2KGNECuRJX_gf9R51kOiAhzarOFeXBTSCJwCVrB7FMHIg-AoLmWjpVeNc_uiYV1YCwX0mZAtfljdM7VUYQBIyZgYpB9ctVyqbKMPU6j1SBAAcpIhoG1ZXy8m0W0CHqLMn0jGjk6wIEH9LurK1vHNEvLH9DpWoQfjQtvffkSRwuhQMaeaRwWD8XOWy8dE7amXWqwjBQ6w-B2meMqRXG1bQhujwB_wmzMIgX6cpXFWbyxNX0fEn5v-PxS3mLLS_d-IOl3TdtiXpm3012TWYyHZcjJqERiyx9D_1yDD6t_GNfVd7jTM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/court?name=lapangan jaya raya&weekday_price=50000&weekend_price=60000&location=Depok&phone_number=14544",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"court"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "lapangan jaya raya"
+						},
+						{
+							"key": "weekday_price",
+							"value": "50000"
+						},
+						{
+							"key": "weekend_price",
+							"value": "60000"
+						},
+						{
+							"key": "location",
+							"value": "Depok"
+						},
+						{
+							"key": "phone_number",
+							"value": "14544"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Court",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZlMDAyMTRjODc4ZTBiOTZhMGZiZWExOGNlODI3MmVmMTE3ZTQzYTY5NWQwMzgxODFjNmU0NGQwM2U0NDAxNDFkZGI3YzBhOGI4MTdkNzEwIn0.eyJhdWQiOiIxIiwianRpIjoiNmUwMDIxNGM4NzhlMGI5NmEwZmJlYTE4Y2U4MjcyZWYxMTdlNDNhNjk1ZDAzODE4MWM2ZTQ0ZDAzZTQ0MDE0MWRkYjdjMGE4YjgxN2Q3MTAiLCJpYXQiOjE1NzIxODc0NjAsIm5iZiI6MTU3MjE4NzQ2MCwiZXhwIjoxNjAzODA5ODYwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rqmPl0Xa1ncP-NAYJsFLtZA-qIHHgL_yIbczGKd3Px_6mROjw2qW0f8QppxbTxST_JsCjXYgqjvUFdLJ-yOPi5i1tEZ6F6PIyWvkDax6UDUmm5Y7-DAuWu7r7J5ZUv0JVZAas1iSfCh3DbT3mLjNPEumsH88_FQJKNdyap_O7M3AEJvGAtvc-AheY4dE9n2WVNdYe9lUK7w6hU0ZcWTHt0aCkIeyJvBQM5FHPSdOymHdRvmd_tQEEorc1DuBqO0UubKfZGsbWUMcaxgQn1ZGLWqxbKG0AE_NvuLJrE2NCyF4ZQqH-VV6oTDlUC71iMbYNgm8Pi3F6dut5nQlc-3y9DOj1biZAQ-veLD_BiON9h9o8UPW9P-LauIPlCd2KGNECuRJX_gf9R51kOiAhzarOFeXBTSCJwCVrB7FMHIg-AoLmWjpVeNc_uiYV1YCwX0mZAtfljdM7VUYQBIyZgYpB9ctVyqbKMPU6j1SBAAcpIhoG1ZXy8m0W0CHqLMn0jGjk6wIEH9LurK1vHNEvLH9DpWoQfjQtvffkSRwuhQMaeaRwWD8XOWy8dE7amXWqwjBQ6w-B2meMqRXG1bQhujwB_wmzMIgX6cpXFWbyxNX0fEn5v-PxS3mLLS_d-IOl3TdtiXpm3012TWYyHZcjJqERiyx9D_1yDD6t_GNfVd7jTM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/court/1?name=lapangan lancar jaya",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"court",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "lapangan lancar jaya"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Court",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZlMDAyMTRjODc4ZTBiOTZhMGZiZWExOGNlODI3MmVmMTE3ZTQzYTY5NWQwMzgxODFjNmU0NGQwM2U0NDAxNDFkZGI3YzBhOGI4MTdkNzEwIn0.eyJhdWQiOiIxIiwianRpIjoiNmUwMDIxNGM4NzhlMGI5NmEwZmJlYTE4Y2U4MjcyZWYxMTdlNDNhNjk1ZDAzODE4MWM2ZTQ0ZDAzZTQ0MDE0MWRkYjdjMGE4YjgxN2Q3MTAiLCJpYXQiOjE1NzIxODc0NjAsIm5iZiI6MTU3MjE4NzQ2MCwiZXhwIjoxNjAzODA5ODYwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rqmPl0Xa1ncP-NAYJsFLtZA-qIHHgL_yIbczGKd3Px_6mROjw2qW0f8QppxbTxST_JsCjXYgqjvUFdLJ-yOPi5i1tEZ6F6PIyWvkDax6UDUmm5Y7-DAuWu7r7J5ZUv0JVZAas1iSfCh3DbT3mLjNPEumsH88_FQJKNdyap_O7M3AEJvGAtvc-AheY4dE9n2WVNdYe9lUK7w6hU0ZcWTHt0aCkIeyJvBQM5FHPSdOymHdRvmd_tQEEorc1DuBqO0UubKfZGsbWUMcaxgQn1ZGLWqxbKG0AE_NvuLJrE2NCyF4ZQqH-VV6oTDlUC71iMbYNgm8Pi3F6dut5nQlc-3y9DOj1biZAQ-veLD_BiON9h9o8UPW9P-LauIPlCd2KGNECuRJX_gf9R51kOiAhzarOFeXBTSCJwCVrB7FMHIg-AoLmWjpVeNc_uiYV1YCwX0mZAtfljdM7VUYQBIyZgYpB9ctVyqbKMPU6j1SBAAcpIhoG1ZXy8m0W0CHqLMn0jGjk6wIEH9LurK1vHNEvLH9DpWoQfjQtvffkSRwuhQMaeaRwWD8XOWy8dE7amXWqwjBQ6w-B2meMqRXG1bQhujwB_wmzMIgX6cpXFWbyxNX0fEn5v-PxS3mLLS_d-IOl3TdtiXpm3012TWYyHZcjJqERiyx9D_1yDD6t_GNfVd7jTM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/court/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"court",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
