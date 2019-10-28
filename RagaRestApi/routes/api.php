@@ -33,4 +33,8 @@ Route::group(['middleware' => 'auth:api'], function()
     Route::apiResource('sport', 'Sport\Sport');
     Route::apiResource('court', 'Court\Court');
     Route::apiResource('sparring', 'Sparring\Sparring');
+    Route::apiResource('comment', 'Comment\Comment');
+    Route::apiResource('friend', 'Friend\Friend');
+    Route::apiResource('schedule', 'Schedule\Schedule');
+    Route::apiResource('sparringparticipant', 'SparringParticipant\SparringParticipant');
 });
