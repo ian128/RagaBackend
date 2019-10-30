@@ -12,7 +12,7 @@ class ScheduleModel extends Model
 
     protected $fillable = [
         "id",
-        "day",
+        "weekday_weekend",
         "open",
         "close",
         "court_id"

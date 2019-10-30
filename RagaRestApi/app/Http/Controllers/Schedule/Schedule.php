@@ -38,7 +38,7 @@ class Schedule extends Controller
     public function store(Request $request)
     {
         $rules = [
-            "day"  => 'required',
+            "weekday_weekend"  => 'required',
             "open"  => 'required',
             "close"  => 'required',
             "court_id" => 'required'

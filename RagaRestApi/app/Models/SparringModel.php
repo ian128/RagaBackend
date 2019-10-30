@@ -12,11 +12,17 @@ class SparringModel extends Model
 
     protected $fillable = [
         "id",
-        "court_id",
-        "starting_time",
-        "ending_time",
+        "name",
         "sport_id",
-        "status"
+        "court_id",
+        "date",
+        "price_per_person",
+        "start_time",
+        "end_time",
+        "desc",
+        "who_can_play",
+        "repeat_every_week",
+        "user_id"
     ];
 
 }
