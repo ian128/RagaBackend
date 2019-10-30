@@ -15,13 +15,20 @@ class CreateSparringsTable extends Migration
     {
         Schema::create('sparrings', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('court_id')->unsigned();
-            $table->foreign('court_id')->references('id')->on('courts');
-            $table->time('starting_time');
-            $table->time('ending_time');
+            $table->string('name');
             $table->integer('sport_id')->unsigned();
             $table->foreign('sport_id')->references('id')->on('sports');
-            $table->string('status');
+            $table->integer('court_id')->unsigned();
+            $table->foreign('court_id')->references('id')->on('courts');
+            $table->date('date');
+            $table->bigInteger('price_per_person');
+            $table->string('start_time');
+            $table->string('end_time');
+            $table->string('desc');
+            $table->string('who_can_play');
+            $table->string('repeat_every_week');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('accounts');
             // $table->timestamps();
         });
     }

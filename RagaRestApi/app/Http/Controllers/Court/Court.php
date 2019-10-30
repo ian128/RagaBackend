@@ -38,11 +38,15 @@ class Court extends Controller
     public function store(Request $request)
     {
         $rules = [
-            "name" => 'required|min:2',
-            "weekday_price" => 'required',
+            "name" => 'required',
+            "user_id" => 'required',
+            "sport_id" => 'required',
+            "email" => 'required',
+            "photo"=> 'required',
+            "weekday_price"=> 'required',
             "weekend_price"=> 'required',
-            "location" => 'required',
-            "phone_number" => 'required'
+            "location"=> 'required',
+            "phone_number"=> 'required'
         ];
         
         $validator = Validator::make($request->all(), $rules);

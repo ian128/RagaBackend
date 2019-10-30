@@ -38,9 +38,8 @@ class Account extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'name' => 'required|min:2',
             'email' => 'required',
-            'username' => 'required',
+            'first_name' => 'required',
             'password' => 'required',
             'phone_number' => 'required'
         ];
@@ -50,7 +49,15 @@ class Account extends Controller
         {
             return response()->json($validator->errors(),400);
         }
-        $account = AccountModel::create($request->all());
+        $data = [
+            'first_name' => $request->first_name,
+            'email'=> $request->email,
+            'last_name' => $request->last_name,
+            'password' => md5($request->password),
+            'phone_number'=> $request->phone_number,
+            'photo_profile'=> $request->photo_profile
+        ];
+        $account = AccountModel::create($data);
         return response()->json($account,201);
     }
 
@@ -96,7 +103,7 @@ class Account extends Controller
             return response()->json(["message"=>'Request not Found'],404);
         }
         $account->update($request->all());
-        return response()->json($account,200);
+        return response()->json($request->email);
     }
 
     /**

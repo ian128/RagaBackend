@@ -13,6 +13,10 @@ class CourtModel extends Model
     protected $fillable = [
         "id",
         "name",
+        "user_id",
+        "sport_id",
+        "email",
+        "photo",
         "weekday_price",
         "weekend_price",
         "location",
