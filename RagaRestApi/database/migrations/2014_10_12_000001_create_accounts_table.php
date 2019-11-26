@@ -15,12 +15,12 @@ class CreateAccountsTable extends Migration
     {
         Schema::create('accounts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email')->unique();
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('password');
-            $table->string('phone_number');
-            $table->string('photo_profile')->nullable();
+            $table->string('email',100)->unique();
+            $table->string('first_name',100);
+            $table->string('last_name',100);
+            $table->string('password',100);
+            $table->string('phone_number',100);
+            $table->string('photo_profile',100)->nullable();
         });
     }
 

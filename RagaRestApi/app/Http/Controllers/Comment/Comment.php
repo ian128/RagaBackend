@@ -16,6 +16,7 @@ class Comment extends Controller
      */
     public function index()
     {
+        
         return response()->json(CommentModel::get(),200);
     }
 

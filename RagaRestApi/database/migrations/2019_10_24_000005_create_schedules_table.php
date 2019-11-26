@@ -15,7 +15,7 @@ class CreateSchedulesTable extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('weekday_weekend');
+            $table->string('weekday_weekend',100);
             $table->time('open');
             $table->time('close');
             $table->integer('court_id')->unsigned();

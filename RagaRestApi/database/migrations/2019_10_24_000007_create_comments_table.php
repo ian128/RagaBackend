@@ -19,7 +19,7 @@ class CreateCommentsTable extends Migration
             $table->foreign('user_id')->references('id')->on('accounts');
             $table->integer('sparring_id')->unsigned();
             $table->foreign('sparring_id')->references('id')->on('sparrings');
-            $table->text('comment');
+            $table->text('comment',500);
             // $table->timestamps();
         });
     }
