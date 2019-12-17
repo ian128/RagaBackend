@@ -15,11 +15,17 @@ class CreateCourtsTable extends Migration
     {
         Schema::create('courts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name',100);
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('accounts');
+            $table->integer('sport_id')->unsigned();
+            $table->foreign('sport_id')->references('id')->on('sports');
+            $table->string('email',100)->unique();
+            $table->string('photo',100)->unique();
             $table->float('weekday_price');
             $table->float('weekend_price');
-            $table->string('location');
-            $table->string('phone_number');
+            $table->string('location',100);
+            $table->string('phone_number',100);
             // $table->timestamps();
         });
     }

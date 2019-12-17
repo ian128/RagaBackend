@@ -38,11 +38,17 @@ class Sparring extends Controller
     public function store(Request $request)
     {
         $rules = [
-            "court_id" => 'required',
-            "starting_time" => 'required',
-            "ending_time" => 'required',
-            "sport_id" => 'required',
-            "status" => 'required'
+            "name"  => 'required',
+            "sport_id"  => 'required',
+            "court_id"  => 'required',
+            "user_id" => 'required',
+            "date"  => 'required',
+            "price_per_person"  => 'required',
+            "start_time"  => 'required',
+            "end_time"  => 'required',
+            "desc"  => 'required',
+            "who_can_play"  => 'required',
+            "repeat_every_week"  => 'required'
         ];
         
         $validator = Validator::make($request->all(), $rules);
